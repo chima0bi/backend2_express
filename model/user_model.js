@@ -51,6 +51,20 @@ const userSchema = mongoose.Schema(
         description: { type: String, required: true },
       },
     ],
+    courses: [
+      {
+        course: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Course",
+          required: false,
+        },
+        price: { type: Number, required: true },
+        description: { type: String, required: true },
+        duration: {
+          type: String
+        },
+      },
+    ],
     experienceYears: {
       required: false,
       type: Number,
